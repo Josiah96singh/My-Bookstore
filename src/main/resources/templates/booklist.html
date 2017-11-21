@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <title>BookList</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Books</h1>
+<table>
+<tr>
+		    <th>Title</th>
+		    <th>Author</th>
+		    <th>Year</th>
+		    <th>ISBN</th>
+		    <th>Price</th>
+		</tr>
+<tr th:each = "books : ${book}">
+<td th:text="${books.title}"></td>
+<td th:text="${books.author}"></td>
+<td th:text="${books.year}"></td>
+<td th:text="${books.isbn}"></td>
+<td th:text="${books.price}"></td>
+</tr>
+</table>
+</body>
+</html>
