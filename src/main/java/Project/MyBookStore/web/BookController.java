@@ -39,5 +39,11 @@ public class BookController {
 	 return "redirect:../index";
    }
    
+   @RequestMapping(value = "/edit/{id}")
+   public String addbook(@PathVariable("id") Long bookId, Model model) {
+	   model.addAttribute("book", brepository.findOne(bookId));
+	   return "editbook";
+   }
+   
 	
 }
