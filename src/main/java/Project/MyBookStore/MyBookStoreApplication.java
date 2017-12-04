@@ -1,7 +1,5 @@
 package Project.MyBookStore;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,8 +10,7 @@ import Project.MyBookStore.domain.BookRepository;
 
 @SpringBootApplication
 public class MyBookStoreApplication {
-	private static final Logger log = LoggerFactory.getLogger(MyBookStoreApplication.class);
-
+	
 	public static void main(String[] args) {
 		SpringApplication.run(MyBookStoreApplication.class, args);
 
@@ -23,8 +20,9 @@ public class MyBookStoreApplication {
 	public CommandLineRunner app(BookRepository brepository) {
 		return (args) -> {
 
-			brepository.save(new Book("A good friend", "Sam", 2010, "1145", 12.5));
-			brepository.save(new Book("Mad man ", "John", 1990, "1145", 14.5));
+			brepository.save(new Book("A good friend", "Sam", 2010, "1145", 12.50));
+			brepository.save(new Book("Mad man", "John", 1990, "4145", 14.40));
+		
 		};
 
 	}
