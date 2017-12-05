@@ -29,6 +29,7 @@ public class MyBookStoreApplication {
 			
 			brepository.save(new Book("A good friend", "Sam",2010, "1145", 12.50, crepository.findByName("Drama").get(0)));
 			brepository.save(new Book("Mad man", "John", 1990,"4145", 14.40, crepository.findByName("Fiction").get(0)));
+			brepository.save(new Book("Winter Wonderland", "Kingly",2000, "3465", 8.50, crepository.findByName("Biopic").get(0)));
 		
 		};
 
